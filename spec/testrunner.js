@@ -22,7 +22,30 @@ describe ("robot functions", function(){
 		expect(Robot.Types.Spinner).toBeDefined();
 	});
 
+});
+
+describe ("weapons", function(){
+
+	it ("should have a weapon function", function(){
+		expect(Weapons.Weapon).toBeDefined();
+	});
+
+	it ("should have a flamethrower", function(){
+		expect(Weapons.Arsenal.Flamethrower).toBeDefined();
+	});
+
+	it ("should have a axe", function(){
+		expect(Weapons.Arsenal.Axe).toBeDefined();
+	});
+
+	it ("should have a vice", function(){
+		expect(Weapons.Arsenal.Vice).toBeDefined();
+	});
+
+	it ("should have a springboard", function(){
+		expect(Weapons.Arsenal.Springboard).toBeDefined();
+	});
 
 
 
-})
+});

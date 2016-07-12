@@ -5,7 +5,7 @@
 const Types = {};
 
 const Robot = function(minrange, maxrange, damage) {
-	this.name=null;
+	this.name = null;
 	this.health = Math.floor(Math.random() * (maxrange - minrange + 1));
 	this.damage = Math.floor(Math.random() * (damage / 10));
 	this.weapons=[];
