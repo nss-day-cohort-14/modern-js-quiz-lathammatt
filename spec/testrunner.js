@@ -46,6 +46,23 @@ describe ("weapons", function(){
 		expect(Weapons.Arsenal.Springboard).toBeDefined();
 	});
 
+	it ("should have blades", function(){
+		expect(Weapons.Arsenal.Blades).toBeDefined();
+	});
+
+	it ("should have ballbearings", function(){
+		expect(Weapons.Arsenal.Ballbearings).toBeDefined();
+	});
+
+	it ("should have a claw", function(){
+		expect(Weapons.Arsenal.Claw).toBeDefined();
+	});
+
+
+	it ("should have a tar gun", function(){
+		expect(Weapons.Arsenal.TarGun).toBeDefined();
+	});
+
 
 
 });

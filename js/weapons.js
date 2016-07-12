@@ -11,7 +11,7 @@ const Weapon = function(){
 
 
 Arsenal.Flamethrower = function(){
-	this.damage = 50;
+	this.damage = 60;
 	this.usage = 100;
 	this.weight = 15;
 	this.accuracy = 90;
@@ -38,13 +38,56 @@ Arsenal.Vice = function(){
 Arsenal.Vice.prototype = new Weapon();
 
 Arsenal.Springboard = function(){
-	this.damage = 20;
+	this.damage = 35;
 	this.usage = 150;
 	this.weight = 65;
 	this.accuracy = 65;
 };
 
 Arsenal.Springboard.prototype = new Weapon();
+
+
+Arsenal.Blades = function(){
+	this.damage = 60;
+	this.usage = 300;
+	this.weight = 50;
+	this.accuracy = 100;
+};
+
+Arsenal.Blades.prototype = new Weapon();
+
+
+
+Arsenal.Ballbearings = function(){
+	this.damage = 60;
+	this.usage = 30;
+	this.weight = 10;
+	this.accuracy = 30;
+};
+
+Arsenal.Ballbearings.prototype = new Weapon();
+
+
+Arsenal.Claw = function(){
+	this.damage = 40;
+	this.usage = 120;
+	this.weight = 50;
+	this.accuracy = 60;
+};
+
+Arsenal.Claw.prototype = new Weapon();
+
+
+Arsenal.TarGun = function(){
+	this.damage = 100;
+	this.usage = 30;
+	this.weight = 30;
+	this.accuracy = 30;
+};
+
+Arsenal.TarGun.prototype = new Weapon();
+
+
 
 
 
