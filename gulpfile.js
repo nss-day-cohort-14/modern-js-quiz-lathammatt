@@ -74,7 +74,7 @@ gulp.task('lint', function() {
   */
 
 gulp.task('specs', function() {
-  return gulp.src('./js/spec/*pec.js')
+  return gulp.src('./spec/*.js')
     .pipe(jasmine({
         reporter: new jasmineSpecReporter({
         displayFailuresSummary: false,
