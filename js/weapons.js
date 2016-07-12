@@ -6,3 +6,4 @@ const Weapon = function(damage, uses, weight){
 	this.weight = weight;
 };
 
+

@@ -9,7 +9,9 @@ const Robot = function(minrange, maxrange, damage) {
 	this.health = Math.floor(Math.random() * (maxrange - minrange + 1));
 	this.damage = Math.floor(Math.random() * (damage / 10));
 	this.weapons=[];
-	this.weaponsNumber = 2;	
+	this.weaponsNumber = 2;
+	this.armor = null;
+
 
 };
 
@@ -32,6 +34,7 @@ Types.Crusher = function(){
 Types.Crusher.prototype = new Robot();
 
 
+module.exports={Robot, Types};
 
 
 
