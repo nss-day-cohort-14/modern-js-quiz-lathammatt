@@ -62,7 +62,4 @@ describe ("weapons", function(){
 	it ("should have a tar gun", function(){
 		expect(Weapons.Arsenal.TarGun).toBeDefined();
 	});
-
-
-
 });
