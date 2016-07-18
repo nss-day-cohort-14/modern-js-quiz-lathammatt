@@ -1,8 +1,9 @@
+
 "use strict";
 
-const Arsenal = {};
+let Arsenal = {};
 
-const Weapon = function(){
+let Weapon = function(){
 	this.damage = null;
 	this.usage = null;
 	this.weight = null;

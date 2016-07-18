@@ -2,6 +2,7 @@
 
 const Robot = require ("../js/robots");
 const Weapons = require ("../js/weapons");
+const Warriors = require ("../js/warriors");
 
 
 describe ("robot functions", function(){
@@ -34,7 +35,7 @@ describe ("weapons", function(){
 		expect(Weapons.Arsenal.Flamethrower).toBeDefined();
 	});
 
-	it ("should have a axe", function(){
+	it ("should have an axe", function(){
 		expect(Weapons.Arsenal.Axe).toBeDefined();
 	});
 
