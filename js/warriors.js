@@ -11,6 +11,7 @@ Katapult.name = "Katapult";
 Katapult.weapon = new Weaps.Arsenal.Springboard();
 
 
+
 let Ballsy = new Robo.Types.Flipper();
 Ballsy.name = "Ballsy";
 Ballsy.weapon = new Weaps.Arsenal.Ballbearings();
@@ -35,8 +36,7 @@ let Lothar = new Robo.Types.Crusher();
 Lothar.name = "Lothar";
 Lothar.weapon = new Weaps.Arsenal.Vice();
 
-console.log("kath", Katapult);
 
-module.exports={Roster};
+module.exports={Katapult, Ballsy, Ninja, BadAxe, Parasite, Lothar};
 
-console.log("roster", Roster);
+console.log("warriors", Katapult, Ballsy, Ninja, BadAxe, Parasite, Lothar);
