@@ -11,6 +11,7 @@ let Robot = function(minrange, maxrange, damage) {
 	this.weapon=null;
 	this.weapon2=null;
 	this.armor = null;
+	this.speed=null;
 
 
 };
