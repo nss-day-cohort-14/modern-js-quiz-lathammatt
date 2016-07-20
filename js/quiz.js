@@ -16,19 +16,13 @@ var move = false;
 
 switch (next) {
   case "nextweapons":
-    move = ($("#player-name").val() !== "");
+    move = ($("#").val() !== "");
     break;
-  case "card--oneweapon":
-    move = ($("#player-name").val() !== "");
+  case "nextextras":
+    move = ($("#").val() !== "");
     break;
-  case "card--twoweapon":
-    move = ($("#player-name").val() !== "");
-    break;
-  case "card--spells":
-    move = ($("#player-name").val() !== "");
-    break;
-  case "card--battleground":
-    move = ($("#player-name").val() !== "");
+  case "nextbattle":
+    move = ($("#").val() !== "");
     break;
 }
 
