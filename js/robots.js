@@ -33,7 +33,7 @@ Types.Spinner.prototype = new Robot();
 
 
 Types.Crusher = function(){
-	Robot.call(this, 50, 150, 100);
+	Robot.call(this, 75, 150, 100);
 };
 
 Types.Crusher.prototype = new Robot();

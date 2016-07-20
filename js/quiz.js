@@ -1,13 +1,14 @@
 "use strict";
 
-const robots = require("./robots");
-const weapons = require("./weapons");
-const warriors = require("./warriors");
+const robots = require("./robots"),
+	 weapons = require("./weapons"),
+	 warriors = require("./warriors"),
+	 extras = require("./extras"),
+	 jquery = require("jquery");
 
-let battle = {
-	robots,
-	weapons,
-	warriors
-};
+
+$("#robot").show();
+
+
 
 

@@ -11,15 +11,14 @@ Katapult.name = "Katapult";
 Katapult.weapon = new Weaps.Arsenal.Springboard();
 
 
+let SeeSaw = new Robo.Types.Flipper();
+SeeSaw.name = "SeeSaw";
+SeeSaw.weapon = new Weaps.Arsenal.Chainsaw();
 
-let Ballsy = new Robo.Types.Flipper();
-Ballsy.name = "Ballsy";
-Ballsy.weapon = new Weaps.Arsenal.Ballbearings();
 
-
-let Ninja = new Robo.Types.Spinner();
-Ninja.name = "Ninja";
-Ninja.weapon = new Weaps.Arsenal.Blades();
+let Taz = new Robo.Types.Spinner();
+Taz.name = "Taz";
+Taz.weapon = new Weaps.Arsenal.Blades();
 
 
 let Parasite = new Robo.Types.Spinner();
@@ -37,6 +36,6 @@ Lothar.name = "Lothar";
 Lothar.weapon = new Weaps.Arsenal.Vice();
 
 
-module.exports={Katapult, Ballsy, Ninja, BadAxe, Parasite, Lothar};
+module.exports={Katapult, SeeSaw, Taz, BadAxe, Parasite, Lothar};
 
-console.log("warriors", Katapult, Ballsy, Ninja, BadAxe, Parasite, Lothar);
+console.log("warriors", Katapult, SeeSaw, Taz, BadAxe, Parasite, Lothar);

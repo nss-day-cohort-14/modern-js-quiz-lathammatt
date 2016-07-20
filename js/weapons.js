@@ -59,14 +59,14 @@ Arsenal.Blades.prototype = new Weapon();
 
 
 
-Arsenal.Ballbearings = function(){
-	this.damage = 60;
+Arsenal.Chainsaw = function(){
+	this.damage = 70;
 	this.usage = 30;
-	this.weight = 10;
-	this.accuracy = 30;
+	this.weight = 40;
+	this.accuracy = 100;
 };
 
-Arsenal.Ballbearings.prototype = new Weapon();
+Arsenal.Chainsaw.prototype = new Weapon();
 
 
 Arsenal.Claw = function(){
