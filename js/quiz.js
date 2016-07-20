@@ -10,5 +10,33 @@ const robots = require("./robots"),
 $("#robot").show();
 
 
+$(".slct").click(function() {
+var next = $(this).attr("next");
+var move = false;
+
+switch (next) {
+  case "nextweapons":
+    move = ($("#player-name").val() !== "");
+    break;
+  case "card--oneweapon":
+    move = ($("#player-name").val() !== "");
+    break;
+  case "card--twoweapon":
+    move = ($("#player-name").val() !== "");
+    break;
+  case "card--spells":
+    move = ($("#player-name").val() !== "");
+    break;
+  case "card--battleground":
+    move = ($("#player-name").val() !== "");
+    break;
+}
+
+if (move) {
+  $(".card").hide();
+  $("." + next).show();
+}
+});
+
 
 
