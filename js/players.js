@@ -1,7 +1,7 @@
 "use strict";
 
 const weapons = require("./weapons");
-const extras = require("./extras)");
+// const extras = require("./extras)");
 const warriors = require("./warriors");
 const robots = require("./robots");
 const jquery = require("jquery");
@@ -14,9 +14,12 @@ toarms.click(userCreate);
 
 
 function userCreate(){
-	player1 = new warriors[$(".modelbtn option:selected").val]();
-	player2 = new warriors[Object.keys(warriors)[randomWarrior]]();
-	console.log("new players", player1, player2);
+	console.log("testing");
+	let test = $(".modelbtn:checked").val();
+	console.log("check", test);
+	player1 = warriors.test;
+	console.log("new players", player1, Object.keys(warriors));
+	player2 = warriors[Object.keys(warriors)[randomwarrior]]();
 	if ($("#p1").val() !== ""){
 	player1.name = $("#p1").val();
 	}

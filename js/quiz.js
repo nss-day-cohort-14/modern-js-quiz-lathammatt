@@ -1,10 +1,11 @@
 "use strict";
 
-const robots = require("./robots"),
-	 weapons = require("./weapons"),
-	 warriors = require("./warriors"),
-	 extras = require("./extras"),
-	 jquery = require("jquery");
+const robots = require("./robots");
+const weapons = require("./weapons");
+const warriors = require("./warriors");
+const extras = require("./extras");
+const players = require("./players");
+const jquery = require("jquery");
 
 
 $("#robot").show();
@@ -31,6 +32,7 @@ $("#robot").show();
 //   $("." + next).show();
 // }
 // });
+
 
 
 

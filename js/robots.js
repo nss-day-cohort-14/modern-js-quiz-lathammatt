@@ -1,8 +1,11 @@
 
 "use strict";
 
+const weaps = require("./weapons");
+
 
 let Types = {};
+let Roster = {};
 
 let Robot = function(minrange, maxrange, damage) {
 	this.name = null;
@@ -39,6 +42,18 @@ Types.Crusher = function(){
 Types.Crusher.prototype = new Robot();
 
 
-module.exports={Robot, Types};
+
+// Roster.Catapult = function(){
+// 	this.name = "Catapult";
+// 	this.weapon = new weaps.Arsenal.Springboard();
+// };
+
+// Roster.Catapult.prototype = new Types.Flipper();
 
 
+module.exports={Robot, Types, Roster};
+console.log("types", Types, Roster, Roster.Catapult);
+
+let player1 = new Roster.Catapult();
+
+console.log("please work", player1);
