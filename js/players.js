@@ -14,18 +14,19 @@ toarms.click(userCreate);
 
 
 function userCreate(){
+	let randomwarrior = Math.floor(Math.random()*5+1);
 	console.log("testing");
 	let test = $(".modelbtn:checked").val();
-	console.log("check", test);
-	player1 = warriors.test;
-	console.log("new players", player1, Object.keys(warriors));
-	player2 = warriors[Object.keys(warriors)[randomwarrior]]();
+	console.log("check", test, $("#p1").val());
+	player1 = new warriors.Roster[test]();
 	if ($("#p1").val() !== ""){
 	player1.name = $("#p1").val();
 	}
+	player2 = new warriors.Roster[Object.keys(warriors.Roster)[randomwarrior]]();
 	if ($("#p2").val() !== ""){
 	player2.name = $("#p2").val();
 	}
+	console.log("new players", player1,player2);
 	console.log("names",player1.name, player2.name);
 }
 

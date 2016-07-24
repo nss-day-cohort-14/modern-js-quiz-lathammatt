@@ -5,7 +5,6 @@ const weaps = require("./weapons");
 
 
 let Types = {};
-let Roster = {};
 
 let Robot = function(minrange, maxrange, damage) {
 	this.name = null;
@@ -51,9 +50,9 @@ Types.Crusher.prototype = new Robot();
 // Roster.Catapult.prototype = new Types.Flipper();
 
 
-module.exports={Robot, Types, Roster};
-console.log("types", Types, Roster, Roster.Catapult);
+module.exports={Robot, Types};
+console.log("types", Types);
 
-let player1 = new Roster.Catapult();
+// let player1 = new Roster.Catapult();
 
-console.log("please work", player1);
+// console.log("please work", player1);
