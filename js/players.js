@@ -45,8 +45,8 @@ function weaponAssign(){
 function addExtras (){
 	let randomExes = Math.floor(Math.random()*4);
 	let selection = $(".exbtn:checked").val();
-	player1.weapon2 = new armor.Goodies[selection]();
-	player2.weapon2 = new armor.Goodies[Object.keys(armor.Goodies)[randomExes]]();
+	player1.extra = new armor.Goodies[selection]();
+	player2.extra = new armor.Goodies[Object.keys(armor.Goodies)[randomExes]]();
 	console.log("extras", player1.extra, player2.extra, player1, player2);
 
 }
