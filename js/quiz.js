@@ -3,7 +3,7 @@
 const robots = require("./robots");
 const weapons = require("./weapons");
 const warriors = require("./warriors");
-const extras = require("./extras");
+const armor = require("./extras");
 const players = require("./players");
 const jquery = require("jquery");
 
@@ -32,7 +32,6 @@ $("#robot").show();
 //   $("." + next).show();
 // }
 // });
-
 
 
 

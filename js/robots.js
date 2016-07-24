@@ -1,7 +1,7 @@
 
 "use strict";
 
-const weaps = require("./weapons");
+// const weaps = require("./weapons");
 
 
 let Types = {};
@@ -14,6 +14,8 @@ let Robot = function(minrange, maxrange, damage) {
 	this.weapon2=null;
 	this.armor = null;
 	this.speed=null;
+	this.extra=null;
+
 
 
 };
@@ -51,7 +53,7 @@ Types.Crusher.prototype = new Robot();
 
 
 module.exports={Robot, Types};
-console.log("types", Types);
+// console.log("types", Types);
 
 // let player1 = new Roster.Catapult();
 

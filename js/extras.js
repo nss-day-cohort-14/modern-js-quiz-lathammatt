@@ -1,5 +1,6 @@
 "use strict";
 
+
 let Goodies = {};
 
 let Extra = function(){
@@ -35,4 +36,4 @@ Goodies.Spikes = function(){
 };
 
 
-module.exports=Goodies;
+module.exports={Extra, Goodies};
