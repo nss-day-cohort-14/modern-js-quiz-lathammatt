@@ -17,7 +17,7 @@ toexts.click(weaponAssign);
 
 
 function userCreate(){
-	let randomwarrior = Math.floor(Math.random()*5+1);
+	let randomwarrior = Math.floor(Math.random()*6);
 	let selection = $(".modelbtn:checked").val();
 	player1 = new warriors.Roster[selection]();
 	if ($("#p1").val() !== ""){
@@ -32,7 +32,7 @@ function userCreate(){
 }
 
 function weaponAssign(){
-	let randomweap = Math.floor(Math.random()*7+1);
+	let randomweap = Math.floor(Math.random()*8);
 	let selection = $(".weapbtn:checked").val();
 	player1.weapon2 = new weapons.Arsenal[selection]();
 	player2.weapon2 = new weapons.Arsenal[Object.keys(weapons.Arsenal)[randomweap]]();
