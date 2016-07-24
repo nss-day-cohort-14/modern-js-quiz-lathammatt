@@ -10,27 +10,27 @@ const robots = require("./robots"),
 $("#robot").show();
 
 
-$(".slct").click(function() {
-var next = $(this).attr("next");
-var move = false;
+// $(".slct").click(function() {
+// var next = $(this).attr("next");
+// var move = false;
 
-switch (next) {
-  case "nextweapons":
-    move = ($("#").val() !== "");
-    break;
-  case "nextextras":
-    move = ($("#").val() !== "");
-    break;
-  case "nextbattle":
-    move = ($("#").val() !== "");
-    break;
-}
+// switch (next) {
+//   case "nextweapons":
+//     move = ($(".modelbtn option:selected").val() !== "");
+//     break;
+//   case "nextextras":
+//     move = ($("#").val() !== "");
+//     break;
+//   case "nextbattle":
+//     move = ($("#").val() !== "");
+//     break;
+// }
 
-if (move) {
-  $(".card").hide();
-  $("." + next).show();
-}
-});
+// if (move) {
+//   $(".card").hide();
+//   $("." + next).show();
+// }
+// });
 
 
 
