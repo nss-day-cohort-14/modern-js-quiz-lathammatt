@@ -37,4 +37,4 @@ Goodies.Spikes = function(){
 
 
 module.exports={Extra, Goodies};
-console.log("good", Goodies);
+console.log("test goods", Goodies);
