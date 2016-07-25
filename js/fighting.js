@@ -14,3 +14,8 @@
 //
 //
 
+const players = require("./players");
+
+function weaponDmg (attacker, defender){
+	
+}

@@ -3,7 +3,7 @@
 const weapons = require("./weapons");
 const warriors = require("./warriors");
 const robots = require("./robots");
-const armor = require("./extras)");
+// const armor = require("./extras)");
 const jquery = require("jquery");
 
 let player1 = null;
@@ -39,6 +39,8 @@ function weaponAssign(){
 	let selection = $(".weapbtn:checked").val();
 	player1.weapon2 = new weapons.Arsenal[selection]();
 	player2.weapon2 = new weapons.Arsenal[Object.keys(weapons.Arsenal)[randomweap]]();
+	player1.speed = Math.floor(player1.speed/((player1.weapon.weight/100)+(player1.weapon2.weight/100)));
+	player2.speed = Math.floor(player2.speed/((player2.weapon.weight/100)+(player2.weapon2.weight/100)));
 	console.log("weaps", player1.weapon2, player2.weapon2, player1, player2);
 }
 
@@ -52,5 +54,3 @@ function addExtras (){
 }
 
 
-
-// get extra, add to extras
