@@ -23,7 +23,7 @@ Arsenal.Flamethrower.prototype = new Weapon();
 Arsenal.Axe = function(){
 	this.damage = 100;
 	this.usage = 250;
-	this.weight = 90;
+	this.weight = 80;
 	this.accuracy = 25;
 };
 
@@ -51,7 +51,7 @@ Arsenal.Springboard.prototype = new Weapon();
 Arsenal.Blades = function(){
 	this.damage = 60;
 	this.usage = 300;
-	this.weight = 65;
+	this.weight = 70;
 	this.accuracy = 100;
 };
 
@@ -62,7 +62,7 @@ Arsenal.Blades.prototype = new Weapon();
 Arsenal.Chainsaw = function(){
 	this.damage = 70;
 	this.usage = 30;
-	this.weight = 70;
+	this.weight = 60;
 	this.accuracy = 100;
 };
 
@@ -72,7 +72,7 @@ Arsenal.Chainsaw.prototype = new Weapon();
 Arsenal.Claw = function(){
 	this.damage = 40;
 	this.usage = 120;
-	this.weight = 60;
+	this.weight = 55;
 	this.accuracy = 60;
 };
 

@@ -10,9 +10,9 @@ let Robot = function(minrange, maxrange, damage, speed) {
 	this.damage = Math.floor((Math.random()+1) * (damage / 5));
 	this.weapon=null;
 	this.weapon2=null;
-	this.armor = null;
 	this.speed=speed;
 	this.extra=null;
+	this.usage=0;
 
 
 

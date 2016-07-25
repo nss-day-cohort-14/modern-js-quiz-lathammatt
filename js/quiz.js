@@ -4,8 +4,8 @@ const robots = require("./robots");
 const players = require("./players");
 const weapons = require("./weapons");
 const warriors = require("./warriors");
-// const armor = require("./extras");
-// const fight = require("./fighting");
+const armor = require("./extras");
+const fight = require("./fighting");
 const jquery = require("jquery");
 
 
@@ -34,5 +34,14 @@ $("#robot").show();
 // }
 // });
 
+// let Battlebots = {
+// 	robots,
+// 	players,
+// 	fight,
+// 	warriors,
+// 	weapons,
+	// armor
+// };
 
+// module.exports = Battlebots;
 
