@@ -56,4 +56,4 @@ Roster.Lothar.prototype = new Robo.Types.Crusher();
 
 module.exports={Roster};
 
-console.log("warriors", Roster);
+
