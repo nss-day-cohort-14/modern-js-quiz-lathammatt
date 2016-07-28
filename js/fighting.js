@@ -6,6 +6,8 @@
 
 
 let players = require("./players");
+let player1 = players.getPlayers().player1;
+let player2 = players.getPlayers().player2;
 
 
 let wp1 = $("#w1");
@@ -13,7 +15,7 @@ let wp2 = $("#w2");
 let output = $("#output");
 
 wp1.click(function() {
-  console.log("playerplayers", players.player1);
+  console.table("playerplayers", players.player1);
   weaponDmg(players.player1, players.player2);
   if (players.player2.health >= 0) {
     setTimeout(function() {
