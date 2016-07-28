@@ -2,7 +2,7 @@
 
 const weapons = require("./weapons");
 const warriors = require("./warriors");
-const robots = require("./robots");
+// const robots = require("./robots");
 const armor = require("./extras");
 const jquery = require("jquery");
 
@@ -64,9 +64,8 @@ let startFight = function() {
 
 
 let getPlayers = function() {
-  return {
-    player1, player2
-  };
+  return "player1";
+
 };
 
 toarms.click(userCreate);
@@ -74,4 +73,6 @@ toexts.click(weaponAssign);
 tobattle.click(startFight);
 
 
-module.exports = getPlayers;
+module.exports = {
+  getPlayers
+};
