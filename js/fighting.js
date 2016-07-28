@@ -10,13 +10,14 @@ let output = $("#output");
 
 wp1.click(function() {
    let player1 = players.getPlayers().player1;
-   let player2 =
-      players.getPlayers().player2;
+   let player2 = players.getPlayers().player2;
+   console.log(player1, player2);
    weaponDmg(player1, player2);
    if (
       player2.health >= 0) {
       setTimeout(function() {
          let dice = Math.floor(Math.random());
+         console.log("dice", dice);
          if (dice <= 0.5) {
             weaponDmg(player2, player1);
          } else {
@@ -29,11 +30,13 @@ wp1.click(function() {
 wp2.click(function() {
    let player1 = players.getPlayers().player1;
    let player2 = players.getPlayers().player2;
+   console.log(player1, player2);
    weapon2Dmg(player1, player2);
    if (
       player2.health >= 0) {
       setTimeout(function() {
-         let dice = Math.floor(Math.random());
+         let dice = Math.random();
+         console.log("dice", dice);
          if (dice <= 0.5) {
             weaponDmg(player2, player1);
          } else {
@@ -46,7 +49,7 @@ wp2.click(function() {
 
 
 function weaponDmg(attacker, defender) {
-   if (attacker.weapon.usage > 0 && attacker.weapon2.usage > 0) {
+   if (attacker.weapon.usage > 0) {
       let random = Math.floor(Math.random() * (50) + 1);
       if (random < attacker.speed) {
          console.log("speed hit", random, attacker.speed);
@@ -54,7 +57,7 @@ function weaponDmg(attacker, defender) {
          console.log("attack vs def health", attack, defender.health);
          defender.health -= attack;
          console.log("new defender health", defender.health);
-         attacker.weapon.usage -= (Math.floor(Math.random() * 20));
+         attacker.weapon.usage -= (Math.floor(Math.random() * 75));
          console.log("attack usage", attacker.weapon.usage);
          if (defender.health > 0) {
             output.html(`${attacker.name} hits ${defender.name} with the ${attacker.weapon.name} for ${attack} damage. ${defender.name}'s health now at ${defender.health}. ${attacker.weapon.name} usage down to ${attacker.weapon.usage}.`);
@@ -67,9 +70,9 @@ function weaponDmg(attacker, defender) {
          }
       } else {
          output.html(`${attacker.name} missed!`);
-         attacker.weapon.usage -= (Math.floor(Math.random() * 20));
+         attacker.weapon.usage -= (Math.floor(Math.random() * 75));
          console.log("Missed!", attacker.weapon.usage);
-         console.log("speed hit", random, attacker.speed);
+         console.log("miss", random, attacker.speed);
       }
    } else if (attacker.weapon.usage <= 0 && attacker.weapon2.usage > 0) {
       output.html(`${attacker.weapon.name} is no longer functional!`);
@@ -96,7 +99,7 @@ function weaponDmg(attacker, defender) {
 }
 
 function weapon2Dmg(attacker, defender) {
-   if (attacker.weapon2.usage > 0 && attacker.weapon.usage > 0) {
+   if (attacker.weapon2.usage > 0) {
       let random = Math.floor(Math.random() * (50) + 1);
       if (random < attacker.speed) {
          console.log("random", random, attacker.speed);
@@ -104,7 +107,7 @@ function weapon2Dmg(attacker, defender) {
          console.log("attack", attack, defender.health);
          defender.health -= attack;
          console.log("defender health", defender.health);
-         attacker.weapon2.usage -= (Math.floor(Math.random() * 20));
+         attacker.weapon2.usage -= (Math.floor(Math.random() * 75));
          console.log("usage", attacker.weapon2.usage);
          if (defender.health > 0) {
             output.html(`${attacker.name} hits ${defender.name} with the ${attacker.weapon2.name} for ${attack} damage. ${defender.name}'s health now at ${defender.health}. ${attacker.weapon2.name} usage down to ${attacker.weapon2.usage}.`);
@@ -116,9 +119,9 @@ function weapon2Dmg(attacker, defender) {
          }
       } else {
          output.html(`${attacker.name} missed!`);
-         attacker.weapon2.usage -= (Math.floor(Math.random() * 20));
+         attacker.weapon2.usage -= (Math.floor(Math.random() * 75));
          console.log("Missed!", attacker.weapon2.usage);
-         console.log("speed hit", random, attacker.speed);
+         console.log("miss", random, attacker.speed);
       }
    } else if (attacker.weapon2.usage <= 0 && attacker.weapon.usage > 0) {
       output.html(`${attacker.weapon2.name} is no longer functional!`);
