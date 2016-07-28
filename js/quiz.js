@@ -13,18 +13,18 @@ $(".slct").click(function() {
 
    switch (next) {
       case "nextweapons":
-         move = ($(".modelbtn option:selected").val() !== "");
+         move = ($(".modelbtn").val() !== "");
          break;
       case "nextextras":
-         move = ($("#").val() !== "");
+         move = ($(".weapbtn").val() !== "");
          break;
       case "nextbattle":
-         move = ($("#").val() !== "");
+         move = ($(".exbtn").val() !== "");
          break;
    }
 
    if (move) {
-      $(".card").hide();
+      $(".page").hide();
       $("." + next).show();
    }
 });

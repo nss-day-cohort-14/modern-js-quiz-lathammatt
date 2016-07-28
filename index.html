@@ -3,34 +3,57 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
+	<title>BattleBots Project</title>
 	<link rel="stylesheet" href="css/quiz.css">
 	<link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
 </head>
 <body>
-	<div id="container-fluid">
-		<section id="robot">
-			<div>
-				<div><a class="model" id="Katapult" href="#">Katapult</a><input type="radio" name="model" value="Katapult" class="modelbtn"></div>
-				<div><a class="model" id="SeeSaw" href="#">See-Saw</a><input type="radio" name="model" value="SeeSaw" class="modelbtn"></div>
-				<div><a class="model" id="Taz" href="#">Taz</a><input type="radio" name="model" value="Taz" class="modelbtn"></div>
-				<div><a class="model" id="Parasite" href="#">Parasite</a><input type="radio" name="model" value="Parasite" class="modelbtn"></div>
-				<div><a class="model" id="BadAxe" href="#">Bad Axe</a><input type="radio" name="model" value="BadAxe" class="modelbtn"></div>
-				<div><a class="model" id="Lothar" href="#">Lothar</a><input type="radio" name="model" value="Lothar" class="modelbtn"></div>
-			</div>
-			<div id="name">
-				<input type="text" id="p1" name="player1" value="" placeholder="Your Robot's Name">
-				<input type="text" id="p2" name="player2" value="" placeholder="Enemy Robot's Name">
-				<div id="nameselect"><button type="submit" id="choose">
-<!-- 				<a class="slct" 
-           		href="#" 
-           		next="nextweapons"> -->
-           		Proceed to Armory</button>
-     		</div>
-			</div>
-		</section>
-		<section id="weapon" class="nextweapons">
+	<div class="container">
+		<header id="header" class="col s12">
+			<h3 class="center-align">Mad Axles: Beyond Thunderchrome</h3>
+		</header><!-- /header -->
+		<div class="row">
+			<section id="robot" class="page col s10 offset-s1">
+				<div>
+					<form action="#">
+						<div>
+							<input type="radio" name="group1" value="Katapult" class="modelbtn with-gap" id="katapult">
+							<label for="katapult">Katapult</label>
+						<div>
+							<input type="radio" name="group1" value="SeeSaw" class="modelbtn with-gap" id="seesaw">
+							<label for="seesaw">See-Saw</label>
+						</div>						
+						<div>
+							<input type="radio" name="group1" value="SeeSaw" class="modelbtn with-gap" id="taz">
+							<label for="taz">Taz</label>
+						</div>						
+						<div>
+							<input type="radio" name="group1" value="SeeSaw" class="modelbtn with-gap" id="parasite">
+							<label for="parasite">Parasite</label>
+						</div>						
+						<div>
+							<input type="radio" name="group1" value="SeeSaw" class="modelbtn with-gap" id="badaxe">
+							<label for="badaxe">Bad Axe</label>
+						</div>						
+						<div>
+							<input type="radio" name="group1" value="SeeSaw" class="modelbtn with-gap" id="Lothar">
+							<label for="Lothar">Lothar</label>
+						</div>
+					</form>
+				</div>
+				<div id="name">
+					<input type="text" id="p1" name="player1" value="" placeholder="Your Robot's Name">
+					<input type="text" id="p2" name="player2" value="" placeholder="Enemy Robot's Name">
+					<div id="nameselect"><a id="choose" class="btn waves-effect waves-dark slct" 
+	           		href="#" 
+	           		next="nextweapons">
+	           		Proceed to Armory</a>
+	     		</div>
+				</div>
+			</section>
+		</div>
+		<section id="weapon" class="nextweapons page">
 			<div><input type="radio" name="weapon" value="Flamethrower" class="weapbtn">Flamethrower</div>
 			<div><input type="radio" name="weapon" value="Axe" class="weapbtn">Axe</div>
 			<div><input type="radio" name="weapon" value="Vice" class="weapbtn">Vice</div>
@@ -40,23 +63,23 @@
 			<div><input type="radio" name="weapon" value="Claw" class="weapbtn">Claw</div>
 			<div><input type="radio" name="weapon" value="TarGun" class="weapbtn">Tar Gun</div>
 			<div id="weaponselect"><button type="submit" id="armed">
-<!-- 				<a class="slct" 
+				<a class="slct" 
            		href="#" 
-           		next="nextextras"> -->
+           		next="nextextras">
            		Proceed to Extras</button></div>
 		</section>
-		<section class="nextextras">
+		<section class="nextextras page">
 			<div><input type="radio" name="extra" value="Rockets" class="exbtn">Rockets</div>
 			<div><input type="radio" name="extra" value="Steel" class="exbtn">Steel</div>
 			<div><input type="radio" name="extra" value="PaintJob" class="exbtn">Paint Job</div>
 			<div><input type="radio" name="extra" value="Spikes" class="exbtn">Spikes</div>
 			<div id="extraselect"><button type="submit" id="battletime">
-<!-- 				<a class="slct" 
+				<a class="slct" 
            		href="#" 
-           		next="nextbattle"> -->
+           		next="nextbattle">
 				Proceed to Battleground</button></div>
 		</section>
-		<section class="nextbattle">
+		<section class="nextbattle page">
 			<div>
 				<button type="submit" id="w1">Use Main Weapon</button>
 				<button type="submit" id="w2">Use Secondary Weapon</button>
@@ -66,7 +89,7 @@
 			</div>
 		</section>
 
-	</div>
+	</div> <!-- container end -->
 	
 	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 	<script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
