@@ -40,8 +40,7 @@ $("#robot").show();
 // 	fight,
 // 	warriors,
 // 	weapons,
-	// armor
+// armor
 // };
 
 // module.exports = Battlebots;
-
