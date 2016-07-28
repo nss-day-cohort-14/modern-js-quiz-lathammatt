@@ -64,7 +64,9 @@ let startFight = function() {
 
 
 let getPlayers = function() {
-  return "player1";
+  return {
+    player1, player2
+  };
 
 };
 

@@ -6,8 +6,6 @@
 
 
 const players = require("./players");
-let player1 = players.getPlayers().player1;
-// let player2 = players.getPlayers();
 
 
 let wp1 = $("#w1");
@@ -15,29 +13,36 @@ let wp2 = $("#w2");
 let output = $("#output");
 
 wp1.click(function() {
-  console.log("playerplayers", players.player1);
-  weaponDmg(players.player1, players.player2);
-  if (players.player2.health >= 0) {
+  let player1 = players.getPlayers().player1;
+  let player2 =
+    players.getPlayers().player2;
+  console.log("playerplayers", player1, player2);
+  weaponDmg(player1, player2);
+  if (
+    player2.health >= 0) {
     setTimeout(function() {
       let dice = Math.floor(Math.random());
       if (dice <= 0.5) {
-        weaponDmg(players.player2, players.player1);
+        weaponDmg(player2, player1);
       } else {
-        weapon2Dmg(players.player2, players.player1);
+        weapon2Dmg(player2, player1);
       }
     }, 1500);
   }
 });
 
 wp2.click(function() {
-  weapon2Dmg(players.player1, players.player2);
-  if (players.player2.health >= 0) {
+  let player1 = players.getPlayers().player1;
+  let player2 = players.getPlayers().player2;
+  weapon2Dmg(player1, player2);
+  if (
+    player2.health >= 0) {
     setTimeout(function() {
       let dice = Math.floor(Math.random());
       if (dice <= 0.5) {
-        weaponDmg(players.player2, players.player1);
+        weaponDmg(player2, player1);
       } else {
-        weapon2Dmg(players.player2, players.player1);
+        weapon2Dmg(player2, player1);
       }
     }, 1500);
   }
@@ -58,7 +63,7 @@ function weaponDmg(attacker, defender) {
       attacker.weapon.usage -= (Math.floor(Math.random() * 10));
       console.log("usage", attacker.weapon.usage);
       if (defender.health > 0) {
-        output.html(`${attacker.name} hits ${defender.name} with the ${attacker.weapon} for ${attack} damage. ${defender.name}'s health now at ${defender.health}. ${attacker.weapon} usage own to ${attacker.weapon.usage}.`);
+        output.html(`${attacker.name} hits ${defender.name} with the ${attacker.weapon.name} for ${attack} damage. ${defender.name}'s health now at ${defender.health}. ${attacker.weapon.name} usage own to ${attacker.weapon.usage}.`);
       } else {
         output.html(`${attacker.name} destroys ${defender.name} and wins the match!`);
         let wp1 = null;
@@ -74,7 +79,7 @@ function weaponDmg(attacker, defender) {
 
 function weapon2Dmg(attacker, defender) {
   if (attacker.weapon2.usage > 0) {
-    let random = Math.floor(Math.random() * (100) + 1);
+    let random = Math.floor(Math.random() * (50) + 1);
     if (random < attacker.speed) {
       console.log("random", random, attacker.speed);
       let attack = (Math.floor(Math.random() * attacker.weapon2.damage)) + attacker.damage;
@@ -84,7 +89,7 @@ function weapon2Dmg(attacker, defender) {
       attacker.weapon2.usage -= (Math.floor(Math.random() * 10));
       console.log("usage", attacker.weapon2.usage);
       if (defender.health > 0) {
-        output.html(`${attacker.name} hits ${defender.name} with the ${attacker.weapon2} for ${attack} damage. ${defender.name}'s health now at ${defender.health}. ${attacker.weapon2} usage own to ${attacker.weapon2.usage}.`);
+        output.html(`${attacker.name} hits ${defender.name} with the ${attacker.weapon2.name} for ${attack} damage. ${defender.name}'s health now at ${defender.health}. ${attacker.weapon2.name} usage down to ${attacker.weapon2.usage}.`);
       } else {
         output.html(`${attacker.name} destroys ${defender.name} and wins the match!`);
         let wp1 = null;
