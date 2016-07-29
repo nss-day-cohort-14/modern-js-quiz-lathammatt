@@ -11,41 +11,64 @@
 <body>
 	<div class="container">
 		<header id="header" class="col s12">
-			<h3 class="center-align">Mad Axles: Beyond Thunderchrome</h3>
+			<h3 class="center-align">Mad Axles: Beyond Bumperchrome</h3>
 		</header><!-- /header -->
 		<div class="row">
 			<section id="robot" class="page col s10 offset-s1">
 				<div>
 					<form action="#">
-						<div>
-							<input type="radio" name="group1" value="Katapult" class="modelbtn with-gap" id="katapult">
-							<label for="katapult">Katapult</label>
-						<div>
-							<input type="radio" name="group1" value="SeeSaw" class="modelbtn with-gap" id="seesaw">
-							<label for="seesaw">See-Saw</label>
-						</div>						
-						<div>
-							<input type="radio" name="group1" value="SeeSaw" class="modelbtn with-gap" id="taz">
-							<label for="taz">Taz</label>
-						</div>						
-						<div>
-							<input type="radio" name="group1" value="SeeSaw" class="modelbtn with-gap" id="parasite">
-							<label for="parasite">Parasite</label>
-						</div>						
-						<div>
-							<input type="radio" name="group1" value="SeeSaw" class="modelbtn with-gap" id="badaxe">
-							<label for="badaxe">Bad Axe</label>
-						</div>						
-						<div>
-							<input type="radio" name="group1" value="SeeSaw" class="modelbtn with-gap" id="Lothar">
-							<label for="Lothar">Lothar</label>
-						</div>
+						<div class="row">
+							<div class="botdisplay col s4">
+								<input type="radio" name="group1" value="Katapult" class="modelbtn with-gap" id="katapult">
+								<label for="katapult">Katapult</label>
+								<p>
+								All-round exceptional flipperbot with built-in springboard for launching opponents.
+								</p>
+							</div>
+							<div class="botdisplay  col s4">
+								<input type="radio" name="group1" value="SeeSaw" class="modelbtn with-gap" id="seesaw">
+								<label for="seesaw">See-Saw</label>
+								<p>
+								A flipperbot that likes to strike with a mini-chainsaw hidden within its chassis.
+								</p>
+							</div>						
+							<div class="botdisplay col s4">
+								<input type="radio" name="group1" value="Taz" class="modelbtn with-gap" id="taz">
+								<label for="taz">Taz</label>
+								<p>
+								Named after the cartoon character, he spins out of control with blades slashing everywhere.
+								</p>
+							</div>						
+						</div> <!-- row end -->
+						<div class="row">
+							<div class="botdisplay col s4">
+								<input type="radio" name="group1" value="Parasite" class="modelbtn with-gap" id="parasite">
+								<label for="parasite">Parasite</label>
+								<p>
+								A spinnerbot with a claw it can use to attach itself to an opponent's weak side.
+								</p>
+							</div>						
+							<div class="botdisplay col s4">
+								<input type="radio" name="group1" value="BadAxe" class="modelbtn with-gap" id="badaxe">
+								<label for="badaxe">Bad Axe</label>
+								<p>
+								A slow crusherbot with a large titanium axe perfect for hacking enemies to pieces.
+								</p>
+							</div>						
+							<div class="botdisplay col s4">
+								<input type="radio" name="group1" value="Lothar" class="modelbtn with-gap" id="Lothar">
+								<label for="Lothar">Lothar</label>
+								<p>
+								This biggest of the bunch who loves to catch faster bots in its vice and flatten them like empty soda cans.
+								</p>
+							</div>
+						</div> <!-- row end -->
 					</form>
 				</div>
 				<div id="name">
-					<input type="text" id="p1" name="player1" value="" placeholder="Your Robot's Name">
-					<input type="text" id="p2" name="player2" value="" placeholder="Enemy Robot's Name">
-					<div id="nameselect"><a id="choose" class="btn waves-effect waves-dark slct" 
+					<input type="text" id="p1" name="player1" value="" placeholder="Optional: Your Robot's Name">
+					<input type="text" id="p2" name="player2" value="" placeholder="Optional: Enemy Robot's Name">
+					<div id="nameselect"><a id="choose" class="btn blue-grey waves-effect waves-red slct" 
 	           		href="#" 
 	           		next="nextweapons">
 	           		Proceed to Armory</a>

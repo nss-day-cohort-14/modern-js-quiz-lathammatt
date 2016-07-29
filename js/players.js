@@ -14,9 +14,6 @@ let tobattle = $("#battletime");
 let userCreate = function() {
    let randomwarrior = Math.floor(Math.random() * 6);
    let selection = $(".modelbtn:checked").val();
-   // if (selection === ""){
-   // 	alert("Please select a robot");
-   // }
    player1 = new warriors.Roster[selection]();
    if ($("#p1").val() !== "") {
       player1.name = $("#p1").val();
