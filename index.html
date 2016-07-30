@@ -140,15 +140,43 @@
    		</div>
 		</section>
 		<section class="nextextras page">
-			<div><input type="radio" name="extra" value="Rockets" class="exbtn">Rockets</div>
-			<div><input type="radio" name="extra" value="Steel" class="exbtn">Steel</div>
-			<div><input type="radio" name="extra" value="PaintJob" class="exbtn">Paint Job</div>
-			<div><input type="radio" name="extra" value="Spikes" class="exbtn">Spikes</div>
-			<div id="extraselect"><button type="submit" id="battletime">
-				<a class="slct" 
+			<div>
+				<form action="#">
+					<div class="row">
+						<div class="extradisplay col s4">
+							<input type="radio" name="group3" value="Rockets" class="exbtn with-gap" id="Rockets">
+							<label for="Rockets">Rockets</label>
+							<p>Increase speed and the ability to avoid your opponent's attack.
+							</p>
+						</div>
+						<div class="extradisplay col s4">
+							<input type="radio" name="group3" value="Steel" class="exbtn with-gap" id="Steel">
+							<label for="Steel">Steel</label>
+							<p>Extra armor for added resistence and security.
+							</p>
+						</div>
+						<div class="extradisplay col s4">
+							<input type="radio" name="group3" value="PaintJob" class="exbtn with-gap" id="PaintJob">
+							<label for="PaintJob">Paint Job</label>
+							<p>May not really do much, but you look cool.
+							</p>
+						</div>
+						<div class="extradisplay col s4">
+							<input type="radio" name="group3" value="Spikes" class="exbtn with-gap" id="Spikes">
+							<label for="Spikes">Spikes</label>
+							<p>Not only helps create distance between your main body and the enemy's strikes, but increase their damage when ramming.
+							</p>
+						</div>	
+					</div>
+				</form>
+			</div>
+			<div id="extraselect">
+				<a id="battletime" class="btn blue-grey waves-effect waves-red slct"
            		href="#" 
            		next="nextbattle">
-				Proceed to Battleground</button></div>
+				Proceed to Battleground
+				</a>
+			</div>
 		</section>
 		<section class="nextbattle page">
 			<div>
