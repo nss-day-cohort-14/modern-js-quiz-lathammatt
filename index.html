@@ -77,19 +77,67 @@
 			</section>
 		</div>
 		<section id="weapon" class="nextweapons page">
-			<div><input type="radio" name="weapon" value="Flamethrower" class="weapbtn">Flamethrower</div>
-			<div><input type="radio" name="weapon" value="Axe" class="weapbtn">Axe</div>
-			<div><input type="radio" name="weapon" value="Vice" class="weapbtn">Vice</div>
-			<div><input type="radio" name="weapon" value="Springboard" class="weapbtn">Springboard</div>
-			<div><input type="radio" name="weapon" value="Blades" class="weapbtn">Blades</div>
-			<div><input type="radio" name="weapon" value="Chainsaw" class="weapbtn">Chainsaw</div>
-			<div><input type="radio" name="weapon" value="Claw" class="weapbtn">Claw</div>
-			<div><input type="radio" name="weapon" value="TarGun" class="weapbtn">Tar Gun</div>
-			<div id="weaponselect"><button type="submit" id="armed">
-				<a class="slct" 
+			<div>
+				<form action="#">
+					<div class="row">
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="Flamethrower" class="weapbtn with-gap" id="Flamethrower">
+							<label for="Flamethrower">Flamethrower</label>
+							<p>Decent weapon for melting exposed electronics or wires, but not effective against metal plating.
+							</p>
+						</div>
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="Axe" class="weapbtn with-gap" id="Axe">
+							<label for="Axe">Axe</label>
+							<p>While heavy and difficult to weild, it can deliver a mighty blow.
+							</p>
+						</div>
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="Vice" class="weapbtn with-gap" id="Vice">
+							<label for="Vice">Vice</label>
+							<p>If you get lucky and manage to catch your opponent in this weapon's clutches, it's all over.
+							</p>
+						</div>
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="Springboard" class="weapbtn with-gap" id="Springboard">
+							<label for="Springboard">Springboard</label>
+							<p>An effective means of flipping your opponent on its back and exposing its weak undercarriage. Or toss it into danger.
+							</p>
+						</div>		
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="Blades" class="weapbtn with-gap" id="Blades">
+							<label for="Blades">Blades</label>
+							<p>Rotating on a disc of your preferred size, these little knives can shear off parts of your enemies.
+							</p>
+						</div>
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="Chainsaw" class="weapbtn with-gap" id="Chainsaw">
+							<label for="Chainsaw">Chainsaw</label>
+							<p>Although use is limited and can be easily damaged, it cuts a serious gash into anything.
+							</p>
+						</div>
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="Claw" class="weapbtn with-gap" id="Claw">
+							<label for="Claw">Claw</label>
+							<p>Useful for latching on to quick bots or tearing off fragile pieces of their equipment.
+							</p>
+						</div>
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="TarGun" class="weapbtn with-gap" id="TarGun">
+							<label for="TarGun">Tar Gun</label>
+							<p>Helps to clog up opponents servos or get them stuck on the ground for an easy assault.
+							</p>
+						</div>
+					</div>
+				</form>		
+			</div>
+			<div id="weaponselect">
+				<a id="armed" class="btn blue-grey waves-effect waves-red slct"
            		href="#" 
            		next="nextextras">
-           		Proceed to Extras</button></div>
+           		Proceed to Extras
+     		</a>
+   		</div>
 		</section>
 		<section class="nextextras page">
 			<div><input type="radio" name="extra" value="Rockets" class="exbtn">Rockets</div>
