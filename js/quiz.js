@@ -4,7 +4,7 @@ const fight = require("./fighting");
 const jquery = require("jquery");
 
 
-$("#robot").show();
+$("#intro").show();
 
 
 $(".slct").click(function() {
@@ -12,6 +12,9 @@ $(".slct").click(function() {
    var move = false;
 
    switch (next) {
+      case "nextrobots":
+         move = ($("#movingon").click);
+         break;
       case "nextweapons":
          move = ($(".modelbtn").val() !== "");
          break;
@@ -28,14 +31,3 @@ $(".slct").click(function() {
       $("." + next).show();
    }
 });
-
-// let Battlebots = {
-// 	robots,
-// 	players,
-// 	fight,
-// 	warriors,
-// 	weapons,
-// armor
-// };
-
-// module.exports = Battlebots;
