@@ -10,6 +10,9 @@ let player2 = {};
 let toarms = $("#choose");
 let toexts = $("#armed");
 let tobattle = $("#battletime");
+let p1health = null;
+let p2health = null;
+
 
 let userCreate = function() {
    let randomwarrior = Math.floor(Math.random() * 6);
@@ -58,38 +61,38 @@ let setBattle = function() {
    p1display.append(`<h4>${player1.name}</h4> with ${player1.extra.name}`);
    p1display.append(`<div class="speed">Speed: ${player1.speed}</div>`);
    p1display.append(`<div class="health">Health: ${player1.health}</div>`);
-   p1display.append(`<div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-  </div>
-  </div>`);
-   p1display.append(`${player1.weapon.name} Power: ${player1.weapon.usage}`);
-   p1display.append(`<div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-  </div>
-  </div>`);
-   p1display.append(`${player1.weapon2.name} Power: ${player1.weapon2.usage}`);
-   p1display.append(`<div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-  </div>
-   </div>`);
+   //  p1display.append(`<div class="progress">
+   // <div class="health-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+   // </div>
+   // </div>`);
+   p1display.append(`<div class="w1usage">${player1.weapon.name} Power: ${player1.weapon.usage}</div>`);
+   //  p1display.append(`<div class="progress">
+   // <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+   // </div>
+   // </div>`);
+   p1display.append(`<div class="w2usage">${player1.weapon2.name} Power: ${player1.weapon2.usage}</div>`);
+   //  p1display.append(`<div class="progress">
+   // <div class="progress-bar health-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+   // </div>
+   //  </div>`);
 
    p2display.append(`<h4>${player2.name}</h4> with ${player2.extra.name}`);
    p2display.append(`<div class="speed">Speed: ${player1.speed}</div>`);
    p2display.append(`<div class="health">Health: ${player2.health}</div>`);
-   p2display.append(`<div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-  </div>
-  <div>`);
-   p2display.append(`${player2.weapon.name} Power: ${player2.weapon.usage}`);
-   p2display.append(`<div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-  </div>
-  </div?`);
-   p2display.append(`${player2.weapon2.name} Power: ${player2.weapon2.usage}`);
-   p2display.append(`<div class="progress">
-  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-  </div>
-   </div>`);
+   //  p2display.append(`<div class="progress">
+   // <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+   // </div>
+   // <div>`);
+   p2display.append(`<div class="w1usage">${player2.weapon.name} Power: ${player2.weapon.usage}</div>`);
+   //  p2display.append(`<div class="progress">
+   // <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+   // </div>
+   // </div?`);
+   p2display.append(`<div class="w2usage">${player2.weapon2.name} Power: ${player2.weapon2.usage}</div>`);
+   //  p2display.append(`<div class="progress">
+   // <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+   // </div>
+   //  </div>`);
 
 }
 

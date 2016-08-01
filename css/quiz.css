@@ -16,3 +16,8 @@
 .extradisplay {
 	height: 160px;
 }
+
+#output {
+	height: 300px;
+	overflow: scroll;
+}
