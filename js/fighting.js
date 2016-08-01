@@ -144,3 +144,13 @@ function weapon2Dmg(attacker, defender) {
 
    }
 }
+
+function updateDOM() {
+   var p1display = $("#p1disp");
+   var p2display = $("#p2disp");
+   p1display.find(".health").html(`Health: ${players.player1.energy}`);
+   p1display.find(".experience").html(`Experience: ${players.player1.experience}`);
+   p1display.find(".skill").html(`Skill: ${players.player1.skill}`);
+   p1display.find(".progress").find(".progress-bar").prop("style", `width:${(players.player1.energy/p1Max)*100}%`);
+
+}

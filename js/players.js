@@ -52,10 +52,51 @@ let addExtras = function() {
 
 };
 
-// let startFight = function() {
-//   addExtras();
-//   console.log("playersjs", player1, player2);
-// };
+let setBattle = function() {
+   var p1display = $("#p1disp");
+   var p2display = $("#p2disp");
+   p1display.append(`<h4>${player1.name}</h4> with ${player1.extra.name}`);
+   p1display.append(`<div class="speed">Speed: ${player1.speed}</div>`);
+   p1display.append(`<div class="health">Health: ${player1.health}</div>`);
+   p1display.append(`<div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+  </div>
+  </div>`);
+   p1display.append(`${player1.weapon.name} Power: ${player1.weapon.usage}`);
+   p1display.append(`<div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+  </div>
+  </div>`);
+   p1display.append(`${player1.weapon2.name} Power: ${player1.weapon2.usage}`);
+   p1display.append(`<div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+  </div>
+   </div>`);
+
+   p2display.append(`<h4>${player2.name}</h4> with ${player2.extra.name}`);
+   p2display.append(`<div class="speed">Speed: ${player1.speed}</div>`);
+   p2display.append(`<div class="health">Health: ${player2.health}</div>`);
+   p2display.append(`<div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+  </div>
+  <div>`);
+   p2display.append(`${player2.weapon.name} Power: ${player2.weapon.usage}`);
+   p2display.append(`<div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+  </div>
+  </div?`);
+   p2display.append(`${player2.weapon2.name} Power: ${player2.weapon2.usage}`);
+   p2display.append(`<div class="progress">
+  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+  </div>
+   </div>`);
+
+}
+
+let startFight = function() {
+   addExtras();
+   setBattle();
+}
 
 
 let getPlayers = function() {
@@ -67,7 +108,7 @@ let getPlayers = function() {
 
 toarms.click(userCreate);
 toexts.click(weaponAssign);
-tobattle.click(addExtras);
+tobattle.click(startFight);
 
 
 module.exports = {

@@ -4,6 +4,15 @@
 	display: none;
 }
 
-body {
+.botdisplay {
+	height: 125px;
+}
 
+.weapondisplay {
+	height: 125px;
+	margin: 10px 0;
+}
+
+.extradisplay {
+	height: 160px;
 }
