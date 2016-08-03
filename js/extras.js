@@ -1,38 +1,42 @@
 "use strict";
 
+
 let Goodies = {};
 
-let Extra = function(){
-	this.armor=null;
-	this.accuracy=null;
-	this.speed=null;
+// need to rework amounts for fairer use
+
+let Extra = function() {
+   this.armor = null;
+   this.speed = null;
 };
 
-Goodies.Rockets = function(){
-	this.armor=0;
-	this.accuracy=-15;
-	this.speed=50;
+Goodies.Rockets = function() {
+   this.name = "Rockets";
+   this.armor = 0;
+   this.speed = 25;
 };
 
-Goodies.Steel = function(){
-	this.armor=50;
-	this.accuracy=0;
-	this.speed=-15;
-};
-
-
-Goodies.PaintJob = function(){
-	this.armor=10;
-	this.accuracy=0;
-	this.speed=0;
+Goodies.Steel = function() {
+   this.name = "Steel";
+   this.armor = 50;
+   this.speed = -15;
 };
 
 
-Goodies.Spikes = function(){
-	this.armor=35;
-	this.accuracy=10;
-	this.speed=-10;
+Goodies.PaintJob = function() {
+   this.name = "Paint Job";
+   this.armor = 10;
+   this.speed = 0;
 };
 
 
-module.exports=Goodies;
+Goodies.Spikes = function() {
+   this.name = "Spikes";
+   this.armor = 35;
+   this.speed = -10;
+};
+
+
+module.exports = {
+   Extra, Goodies
+};

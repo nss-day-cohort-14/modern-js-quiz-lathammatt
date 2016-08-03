@@ -3,12 +3,226 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
+	<title>BattleBots Project</title>
 	<link rel="stylesheet" href="css/quiz.css">
+	<link type="text/css" rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css"  media="screen,projection"/>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
 </head>
 <body>
+	<div class="container">
+		<header id="header" class="col s12">
+			<h3 class="center-align">Mad Axles: Beyond Bumperchrome</h3>
+		</header><!-- /header -->
+		<div class="row">
+			<section id="intro" class="page col s10 offset-s1">
+				<div>
+					<p>
+					Welcome to Beyond Bumperchrome. No idea where we got that name from. Pretty simple life-and-death game here. No pressure. 
+					</p>
+					<p>Pick a robot model (give it a nickname if you want). It will come with a weapon, but you also get to attach a second weapon on it. Weapons will increase damage but can also slow down your speed/accuracy if they are heavy.
+					</p>
+					<p>Then you must add a random bonus item. They can help make up for any shortcomings your robot may have at this point. Maybe. At this point, it's all a toss-up.
+					</p>
+					<p> After all that constructing and hours spent agonizing over every screw and bolt, you will fight your opponent in the Bumperchrome Arena. Each weapon has limited energy, so hope that all your attacks hit their mark or deal enough damage to demolish your enemy before you run out of juice. Make sure not to waste a turn trying to use a disabled weapon.
+					</p>
+					<p>If both robots lose all their weapon power before their health runs out, judges will pick the bot with the most health as the winner. Good luck. You'll need it. Seriously, skill means nothing here but you can try. It's all mostly luck.
+				</div>
+				<div id="movingon" class="center"><a id="start" class="btn blue-grey waves-effect waves-red slct" 
+           		href="#" 
+           		next="nextrobots">
+           		Choose Your Battling Bot</a>
+     		</div>
+			</section>
+			<section id="robot" class="nextrobots page col s10 offset-s1">
+				<div>
+					<form action="#">
+						<div class="row">
+							<!-- need to add shading to buttons, color -->
+							<div class="botdisplay col s4">
+								<input type="radio" name="group1" value="Katapult" class="modelbtn with-gap" id="katapult">
+								<label for="katapult">Katapult</label>
+								<p>
+								All-round exceptional flipperbot with built-in springboard for launching opponents.
+								</p>
+							</div>
+							<div class="botdisplay  col s4">
+								<input type="radio" name="group1" value="SeeSaw" class="modelbtn with-gap" id="seesaw">
+								<label for="seesaw">See-Saw</label>
+								<p>
+								A flipperbot that likes to strike with a mini-chainsaw hidden within its chassis.
+								</p>
+							</div>						
+							<div class="botdisplay col s4">
+								<input type="radio" name="group1" value="Taz" class="modelbtn with-gap" id="taz">
+								<label for="taz">Taz</label>
+								<p>
+								Named after the cartoon character, he spins out of control with blades slashing everywhere.
+								</p>
+							</div>						
+						</div> <!-- row end -->
+						<div class="row">
+							<div class="botdisplay col s4">
+								<input type="radio" name="group1" value="Parasite" class="modelbtn with-gap" id="parasite">
+								<label for="parasite">Parasite</label>
+								<p>
+								A spinnerbot with a claw it can use to attach itself to an opponent's weak side.
+								</p>
+							</div>						
+							<div class="botdisplay col s4">
+								<input type="radio" name="group1" value="BadAxe" class="modelbtn with-gap" id="badaxe">
+								<label for="badaxe">Bad Axe</label>
+								<p>
+								A slow crusherbot with a large titanium axe perfect for hacking enemies to pieces.
+								</p>
+							</div>						
+							<div class="botdisplay col s4">
+								<input type="radio" name="group1" value="Lothar" class="modelbtn with-gap" id="Lothar">
+								<label for="Lothar">Lothar</label>
+								<p>
+								This biggest of the bunch who loves to catch faster bots in its vice and flatten them like empty soda cans.
+								</p>
+							</div>
+						</div> <!-- row end -->
+					</form>
+				</div>
+				<div id="name">
+					<input type="text" id="p1" name="player1" value="" placeholder="Optional: Your Robot's Name">
+					<input type="text" id="p2" name="player2" value="" placeholder="Optional: Enemy Robot's Name">
+					<div id="nameselect" class="center"><a id="choose" class="btn blue-grey waves-effect waves-red slct" 
+	           		href="#" 
+	           		next="nextweapons">
+	           		Proceed to Armory</a>
+	     		</div>
+				</div>
+			</section>
+		</div>
+		<section id="weapon" class="nextweapons page">
+			<div>
+				<form action="#">
+					<div class="row">
+						<!-- need to add shading to buttons, color -->
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="Flamethrower" class="weapbtn with-gap" id="Flamethrower">
+							<label for="Flamethrower">Flamethrower</label>
+							<p>Decent weapon for melting exposed electronics or wires, but not effective against metal plating.
+							</p>
+						</div>
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="Axe" class="weapbtn with-gap" id="Axe">
+							<label for="Axe">Axe</label>
+							<p>While heavy and difficult to weild, it can deliver a mighty blow.
+							</p>
+						</div>
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="Vice" class="weapbtn with-gap" id="Vice">
+							<label for="Vice">Vice</label>
+							<p>If you get lucky and manage to catch your opponent in this weapon's clutches, it's all over.
+							</p>
+						</div>
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="Springboard" class="weapbtn with-gap" id="Springboard">
+							<label for="Springboard">Springboard</label>
+							<p>An effective means of flipping your opponent on its back and exposing its weak undercarriage. Or toss it into danger.
+							</p>
+						</div>		
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="Blades" class="weapbtn with-gap" id="Blades">
+							<label for="Blades">Blades</label>
+							<p>Rotating on a disc of your preferred size, these little knives can shear off parts of your enemies.
+							</p>
+						</div>
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="Chainsaw" class="weapbtn with-gap" id="Chainsaw">
+							<label for="Chainsaw">Chainsaw</label>
+							<p>Although use is limited and can be easily damaged, it cuts a serious gash into anything.
+							</p>
+						</div>
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="Claw" class="weapbtn with-gap" id="Claw">
+							<label for="Claw">Claw</label>
+							<p>Useful for latching on to quick bots or tearing off fragile pieces of their equipment.
+							</p>
+						</div>
+						<div class="weapondisplay col s4">
+							<input type="radio" name="group2" value="TarGun" class="weapbtn with-gap" id="TarGun">
+							<label for="TarGun">Tar Gun</label>
+							<p>Helps to clog up opponents servos or get them stuck on the ground for an easy assault.
+							</p>
+						</div>
+					</div>
+				</form>		
+			</div>
+			<div id="weaponselect" class="center">
+				<a id="armed" class="btn blue-grey waves-effect waves-red slct"
+           		href="#" 
+           		next="nextextras">
+           		Proceed to Extras
+     		</a>
+   		</div>
+		</section>
+		<section class="nextextras page">
+			<div>
+				<form action="#">
+					<div class="row">
+						<!-- need to add shading to buttons, color -->
+						<div class="extradisplay col s3">
+							<input type="radio" name="group3" value="Rockets" class="exbtn with-gap" id="Rockets">
+							<label for="Rockets">Rockets</label>
+							<p>Increase speed and the ability to avoid your opponent's attack.
+							</p>
+						</div>
+						<div class="extradisplay col s3">
+							<input type="radio" name="group3" value="Steel" class="exbtn with-gap" id="Steel">
+							<label for="Steel">Steel</label>
+							<p>Extra armor for added resistence and security, but also added weight.
+							</p>
+						</div>
+						<div class="extradisplay col s3">
+							<input type="radio" name="group3" value="PaintJob" class="exbtn with-gap" id="PaintJob">
+							<label for="PaintJob">Paint Job</label>
+							<p>May not really do much, but you look cool.
+							</p>
+						</div>
+						<div class="extradisplay col s3">
+							<input type="radio" name="group3" value="Spikes" class="exbtn with-gap" id="Spikes">
+							<label for="Spikes">Spikes</label>
+							<p>Not only helps create distance between your main body and the enemy's strikes, but increase their damage when ramming.
+							</p>
+						</div>	
+					</div>
+				</form>
+			</div>
+			<div id="extraselect" class="center">
+				<a id="battletime" class="btn blue-grey waves-effect waves-red slct"
+           		href="#" 
+           		next="nextbattle">
+				Proceed to Battleground
+				</a>
+			</div>
+		</section>
+		<section class="nextbattle page">
+			<div class="row">
+				<div class="col s4" id="p1disp">
+				</div>
+				<div class="col s4" id="controls">
+					<!-- need to add spacing and centering to buttons -->
+					<button type="submit" id="w1" class="center btn blue-grey waves-effect waves-red fight">Use Main Weapon</button>
+					<button type="submit" id="w2" class="center btn blue-grey waves-effect waves-red fight">Use Secondary Weapon</button>
+				</div>
+				<div class="col s4" id="p2disp">
+				</div>
+			</div>
+			<div class="row"> 
+				<div id="output" class="col s6 offset-s3" autoscroll>
+				</div>
+			</div>
+			<!-- need a button to return to bot page -->
+		</section>
+
+	</div> <!-- container end -->
 	
 	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	<script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
 	<script src="dist/bundle.js"></script>
 </body>
 </html>

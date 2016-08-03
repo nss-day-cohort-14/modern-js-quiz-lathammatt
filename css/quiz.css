@@ -1,0 +1,23 @@
+/*need to add more colors to page, override some materialize, add pictures if able*/
+
+.page {
+	display: none;
+}
+
+.botdisplay {
+	height: 125px;
+}
+
+.weapondisplay {
+	height: 125px;
+	margin: 10px 0;
+}
+
+.extradisplay {
+	height: 160px;
+}
+
+#output {
+	height: 300px;
+	overflow: scroll;
+}

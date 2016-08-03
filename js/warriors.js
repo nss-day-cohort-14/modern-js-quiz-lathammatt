@@ -6,37 +6,54 @@ const Weaps = require("./weapons");
 let Roster = {};
 
 
-let Katapult = new Robo.Types.Flipper();
-Katapult.name = "Katapult";
-Katapult.weapon = new Weaps.Arsenal.Springboard();
+Roster.Katapult = function() {
+  this.name = "Katapult";
+  this.weapon = new Weaps.Arsenal.Springboard();
+};
+
+Roster.Katapult.prototype = new Robo.Types.Flipper();
+
+Roster.SeeSaw = function() {
+  this.name = "SeeSaw";
+  this.weapon = new Weaps.Arsenal.Chainsaw();
+};
+
+Roster.SeeSaw.prototype = new Robo.Types.Flipper();
+
+
+Roster.Taz = function() {
+  this.name = "Taz";
+  this.weapon = new Weaps.Arsenal.Blades();
+};
+
+Roster.Taz.prototype = new Robo.Types.Spinner();
+
+
+Roster.Parasite = function() {
+  this.name = "Parasite";
+  this.weapon = new Weaps.Arsenal.Claw();
+};
+
+Roster.Parasite.prototype = new Robo.Types.Spinner();
 
 
 
-let Ballsy = new Robo.Types.Flipper();
-Ballsy.name = "Ballsy";
-Ballsy.weapon = new Weaps.Arsenal.Ballbearings();
+Roster.BadAxe = function() {
+  this.name = "BadAxe";
+  this.weapon = new Weaps.Arsenal.Axe();
+};
+
+Roster.BadAxe.prototype = new Robo.Types.Crusher();
 
 
-let Ninja = new Robo.Types.Spinner();
-Ninja.name = "Ninja";
-Ninja.weapon = new Weaps.Arsenal.Blades();
+Roster.Lothar = function() {
+  this.name = "Lothar";
+  this.weapon = new Weaps.Arsenal.Vice();
+};
+
+Roster.Lothar.prototype = new Robo.Types.Crusher();
 
 
-let Parasite = new Robo.Types.Spinner();
-Parasite.name = "Parasite";
-Parasite.weapon = new Weaps.Arsenal.Claw();
-
-
-let BadAxe = new Robo.Types.Crusher();
-BadAxe.name = "BadAxe";
-BadAxe.weapon = new Weaps.Arsenal.Axe();
-
-
-let Lothar = new Robo.Types.Crusher();
-Lothar.name = "Lothar";
-Lothar.weapon = new Weaps.Arsenal.Vice();
-
-
-module.exports={Katapult, Ballsy, Ninja, BadAxe, Parasite, Lothar};
-
-console.log("warriors", Katapult, Ballsy, Ninja, BadAxe, Parasite, Lothar);
+module.exports = {
+  Roster
+};

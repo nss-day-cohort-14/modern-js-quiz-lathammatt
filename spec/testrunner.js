@@ -51,8 +51,8 @@ describe ("weapons", function(){
 		expect(Weapons.Arsenal.Blades).toBeDefined();
 	});
 
-	it ("should have ballbearings", function(){
-		expect(Weapons.Arsenal.Ballbearings).toBeDefined();
+	it ("should have a chainsaw", function(){
+		expect(Weapons.Arsenal.Chainsaw).toBeDefined();
 	});
 
 	it ("should have a claw", function(){
