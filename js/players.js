@@ -10,8 +10,9 @@ let player2 = {};
 let toarms = $("#choose");
 let toexts = $("#armed");
 let tobattle = $("#battletime");
-let p1health = null;
-let p2health = null;
+// attempt to save the original health of players for health bar on fighting.js
+// let p1health = null;
+// let p2health = null;
 
 
 let userCreate = function() {
@@ -32,7 +33,6 @@ let weaponAssign = function() {
    let randomweap = Math.floor(Math.random() * 8);
    let selection = $(".weapbtn:checked").val();
    player1.weapon2 = new weapons.Arsenal[selection]();
-   console.log("speeds", player1.speed, (player1.weapon.weight / 100), (player1.weapon2.weight / 100), player1.damage);
    player2.weapon2 = new weapons.Arsenal[Object.keys(weapons.Arsenal)[randomweap]]();
    player1.speed = Math.floor(player1.speed / ((player1.weapon.weight / 100) + (player1.weapon2.weight / 100)));
    player2.speed = Math.floor(player2.speed / ((player2.weapon.weight / 100) + (player2.weapon2.weight / 100)));
@@ -54,6 +54,8 @@ let addExtras = function() {
    console.log("p2", "health", player2.health, "damage", player2.damage, "speed", player2.speed);
 
 };
+
+// final screen logic, removed health bars due to issue with saving original values of each meter in order to calculate how much they drop
 
 let setBattle = function() {
    var p1display = $("#p1disp");
@@ -96,11 +98,14 @@ let setBattle = function() {
 
 }
 
+
+
 let startFight = function() {
    addExtras();
    setBattle();
 }
 
+// passes player info to fighting.js. Will need to use simliar method for energy bars.
 
 let getPlayers = function() {
    return {

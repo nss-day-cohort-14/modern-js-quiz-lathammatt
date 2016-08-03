@@ -9,6 +9,7 @@ let Weapon = function() {
    this.accuracy = null;
 };
 
+// need to adjust damage and usage levels for fairer fights
 
 Arsenal.Flamethrower = function() {
    this.name = "Flamethrower";

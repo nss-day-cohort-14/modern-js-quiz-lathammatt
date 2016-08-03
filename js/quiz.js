@@ -10,7 +10,7 @@ $("#intro").show();
 $(".slct").click(function() {
    var next = $(this).attr("next");
    var move = false;
-
+   // page changes with each button
    switch (next) {
       case "nextrobots":
          move = ($("#movingon").click);

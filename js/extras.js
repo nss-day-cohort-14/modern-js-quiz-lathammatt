@@ -3,6 +3,8 @@
 
 let Goodies = {};
 
+// need to rework amounts for fairer use
+
 let Extra = function() {
    this.armor = null;
    this.speed = null;
